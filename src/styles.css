@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos para el cuerpo completo */
+body {
+  background: #06beb6;  /* Fondo azul */
+  background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Estilos para la barra de navegación */
+.toolbar {
+  background-color: #2e06be;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para el logotipo y nombre en la barra de navegación */
+.toolbar img {
+  width: 40px;
+  margin-right: 2px;
+}
+
+/* Estilos para el contenido */
+.content {
+  padding: 5px;
+}
+
+/* Estilos para la lista de empleados */
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 15px 70px; /* Reduce el espacio superior (primer valor) */
+  background: #06beb6;
+  background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);
+  background: linear-gradient(to right, #48b1bf, #06beb6);
+}
+
+/* Estilos para la lista de empleados */
+.list-group-item {
+  background-color: #fff;
+  color: #333;
+  margin: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  width: 150px;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+.list-group-item span {
+  font-weight: bold;
+}
+
+/* Efecto sombreado al pasar el cursor por encima del list-group-item */
+.list-group-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* Estilos para el número de ID */
+.list-group-item .badge-primary {
+  background-color: #ff5733; /* Cambia el color de fondo */
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px; /* Ajusta el tamaño del número de ID */
+  margin-right: 8px; /* Ajusta el margen derecho */
+}
+
+/* Estilos para las tarjetas de resaltado (CRUD e Inserta un nuevo registro) */
+.card.highlight-card {
+  background-color:rgba(30, 74, 158, 0.41);
+  color: white;
+  font-weight: 600; /* Grosor de la fuente */
+  border-radius: 8px ; /* Elimina el borde */
+  width: 300px; /* Redimensiona el ancho */
+  min-width: 30%; /* Reduje el valor de min-width */
+  margin: 10px 20px; /* Espacio entre las tarjetas de resaltado */
+  text-align: center;
+
+  display: flex; /* Alinea los elementos a la izquierda */
+  padding: 0 16px; /* Espacio entre el borde y el contenido */
+  max-width: 700px; /* Redimensiona el ancho */
+  flex-direction: column; /* Alinea el texto a la izquierda */
+  justify-content: center; /* Alinea el texto a la izquierda */
+  align-items: center; /* Alinea el texto a la izquierda */
+}
+
+
