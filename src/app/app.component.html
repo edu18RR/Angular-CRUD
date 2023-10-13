@@ -20,12 +20,24 @@
     <ul class="list-group">
       <li
         *ngFor="let employee of employeeArray"
-        class="list-group-item list-group item-action">
+        class="list-group-item list-group item-action"
+        (click)="openForEdit(employee)"
+        [class.active]="employee == selectedEmployee"
+        >
         <span class="badge badge-primary">{{employee.id}}</span>{{employee.name}} - {{employee.country}}
       </li>
       <div class="card highlight-card card-small">
         <span>Inserta un nuevo registro</span>
       </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="selectedEmployee.name" placeholder="Inserta un nuevo registro" class="form-control">
+        <input type="text" [(ngModel)]="selectedEmployee.country" placeholder="Inserta un country" class="form-control">
+      </div>
+      <button class="btn btn-primary" (click)="addOrEdit()">Guardar</button>
+      <button *ngIf="selectedEmployee.id !==0" class="btn btn-danger" (click)="delete()">Eliminar</button>
+      <button>
+        <a href="https://www.youtube.com/watch?v=arGRTVdG--c&t=257s" target="_blank">Ver video</a>
+      </button>
     </ul>
   </div>
 </div>

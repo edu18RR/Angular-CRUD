@@ -38,7 +38,7 @@ body {
   background: linear-gradient(to right, #48b1bf, #06beb6);
 }
 
-/* Estilos para la lista de empleados */
+/* Lista de empleados */
 .list-group-item {
   background-color: #fff;
   color: #333;
@@ -46,7 +46,7 @@ body {
   border-radius: 8px;
   padding: 10px;
   text-align: left;
-  width: 150px;
+  max-width: 700px; /* Redimensiona el ancho */
   transition: box-shadow 0.3s;
   position: relative;
 }
@@ -95,5 +95,3 @@ body {
   justify-content: center; /* Alinea el texto a la izquierda */
   align-items: center; /* Alinea el texto a la izquierda */
 }
-
-
